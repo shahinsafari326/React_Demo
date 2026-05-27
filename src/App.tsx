@@ -1,8 +1,26 @@
+import Alert from "./components/Alert";
 import ListGroup from "./components/ListGroup";
+import { ListGroupProps } from "./components/ListGroup";
 
+function App() {
+  const items = [
+    "Paris",
+    "A second item",
+    "A third item",
+    "A fourth item",
+    "And a fifth one",
+  ];
 
-function App () {
-    return <ListGroup />
-} 
+  const handleSelectItem = (item: string) => {
+    console.log(item);
+  };
 
-export default App;  
+  const listGroupPrope: ListGroupProps = {
+    items: items,
+    heading: "Cities",
+    onSelectItem: handleSelectItem,
+  };
+  return <Alert>Hello, React!</Alert>;
+}
+
+export default App;
