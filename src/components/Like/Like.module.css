@@ -1,0 +1,15 @@
+.heartBtnNotLiked {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+.heartBtnLiked {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 24px;
+  color: red;
+}
