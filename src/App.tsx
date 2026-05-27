@@ -1,26 +1,26 @@
 import Alert from "./components/Alert";
+import DynamicButton from "./components/DynamicButton";
 import ListGroup from "./components/ListGroup";
 import { ListGroupProps } from "./components/ListGroup";
+import { useState } from "react";
 
 function App() {
-  const items = [
-    "Paris",
-    "A second item",
-    "A third item",
-    "A fourth item",
-    "And a fifth one",
-  ];
+  const [showAlert, setShowAlert] = useState(false);
 
-  const handleSelectItem = (item: string) => {
-    console.log(item);
+  const onClick = () => {
+    console.log("Button Clicked");
   };
 
-  const listGroupPrope: ListGroupProps = {
-    items: items,
-    heading: "Cities",
-    onSelectItem: handleSelectItem,
-  };
-  return <Alert>Hello, React!</Alert>;
+  return (
+    <>
+      <DynamicButton
+        color="danger"
+        label="Ok"
+        onClick={() => setShowAlert(true)}
+      />
+      {showAlert && <Alert onClose={() => setShowAlert(false)} />}
+    </>
+  );
 }
 
 export default App;
