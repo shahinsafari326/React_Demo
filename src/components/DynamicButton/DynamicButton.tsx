@@ -1,5 +1,4 @@
-import React from "react";
-
+import styles from "./DynamicButton.module.css";
 interface DynamicButtonProps {
   label: string;
   color?:
@@ -14,8 +13,12 @@ interface DynamicButtonProps {
   onClick: () => void;
 }
 
-const DynamicButton = ({ label, onClick, color }: DynamicButtonProps) => {
-  const btnClass = `btn btn-${color || "primary"}`;
+const DynamicButton = ({
+  label,
+  onClick,
+  color = "primary", // DEFAULT COLOR
+}: DynamicButtonProps) => {
+  const btnClass = [styles.btn, styles["btn-" + color]].join(" ");
   return (
     <button type="button" className={btnClass} onClick={onClick}>
       {label}

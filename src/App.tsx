@@ -1,8 +1,9 @@
 import Alert from "./components/Alert";
-import DynamicButton from "./components/DynamicButton";
+import DynamicButton from "./components/DynamicButton/DynamicButton";
 import ListGroup from "./components/ListGroup";
 import { ListGroupProps } from "./components/ListGroup";
 import { useState } from "react";
+import styled from "styled-components";
 
 function App() {
   const [showAlert, setShowAlert] = useState(false);
@@ -14,7 +15,7 @@ function App() {
   return (
     <>
       <DynamicButton
-        color="danger"
+        color="primary"
         label="Ok"
         onClick={() => setShowAlert(true)}
       />
