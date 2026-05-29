@@ -1,5 +1,7 @@
 import Alert from "./components/Alert";
+import ChangeNameButton from "./components/ChangeNameButton";
 import DynamicButton from "./components/DynamicButton/DynamicButton";
+import DynamicText from "./components/DynamicText";
 import Like from "./components/Like/Like";
 import ListGroup from "./components/ListGroup";
 import { ListGroupProps } from "./components/ListGroup";
@@ -15,7 +17,7 @@ function App() {
 
   return (
     <>
-      <Like onClick={handleLikeClick} liked={liked} />
+      <DynamicText maxSize={10}>Dynamic Button</DynamicText>
     </>
   );
 }
